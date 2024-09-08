@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block main %}
+    <div class="form" style="text-align: left; padding-right: 20rem; background-color: white;">
+        <form action="/" method="POST" style="text-align: left; background-color: white;">
+            <div> <button type="submit" name="back"> Go Back </button> </div>
+        </form>
+    </div>
+    <div class="container">
+        <div class="login">
+            <form action="/login" method="POST">
+                <div class="but"> <input name="user" type="text" placeholder="Username" required> </div>
+                <div class="but"> <input name="password" type="text" placeholder="Password" required> </div>
+                <div class="but1"> <button type="submit"> Submit </button> </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

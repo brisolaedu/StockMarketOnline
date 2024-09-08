@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{% block main %}
+    <div class="form" style="text-align: left; padding-right: 20rem; background-color: white;">
+        <form action="/buy" method="POST" style="text-align: left; background-color: white;">
+            <div> <button type="submit" name="back"> Go Back </button> </div>
+        </form>
+    </div>
+    <div class="container">
+        <table>
+            <thead>
+                <th> Name </th>
+                <th> Price </th>
+                <th> Quantity </th>
+            </thead>
+            <tbody>
+                {% for stock in stocks %}
+                    <tr>
+                        <td> {{ stock['stock_name'] }} </td>
+                        <td> US$ {{ stock['stock_price'] }}</td>
+                        <td> {{ stock['shares_bought'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+            <thead>
+                <th> Total Value </th>
+                <th> US$ {{ total_value }} </th>
+            </thead>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block main %}
+    <div class="form" style="text-align: left; padding-right: 20rem; background-color: white;">
+        <form action="/buy" method="POST" style="text-align: left; background-color: white;">
+            <div> <button type="submit" name="back"> Go Back </button> </div>
+        </form>
+    </div>
+    <div class="container">
+        <div class="login">
+            <form action="/sell" method="POST">
+                <div class="but"> <input name="search" type="text" placeholder="Stock Name" required> </div>
+                <div class="but"> <input name="number" type="number" placeholder="Number Of Stocks" required> </div>
+                <div class="but"> <input name="index" type="number" placeholder="Stock Index" min="1" required> </div>
+                <div class="but1"> <button type="submit"> Sell </button> </div>
+            </form>
+        </div>
+    </div>
+    <div class="container"> 
+        <table>
+            <tbody>
+                <tr>
+                    <td> Total Sell Value </td>
+                    <td> US$ {{ sell }} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

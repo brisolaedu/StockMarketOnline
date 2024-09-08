@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block main %}
+    <div class="form" style="text-align: left; padding-right: 20rem; background-color: white;">
+        <form action="/buy" method="POST" style="text-align: left; background-color: white;">
+            <div> <button type="submit" name="back"> Go Back </button> </div>
+        </form>
+    </div>
+    <div class="container">
+        <div class="login">
+            <form action="/buy" method="POST">
+                <div class="but"> <input name="search" type="text" placeholder="Stock Name" required> </div>
+                <div class="but"> <input name="number" type="number" placeholder="Number Of Stocks" required> </div>
+                <div class="but1"> <button type="submit"> Buy </button> </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
