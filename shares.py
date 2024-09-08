@@ -28,7 +28,7 @@ def portfolio(db, user_name):
     stocks = db.execute("SELECT stock_name, shares_bought, stock_price FROM accounts WHERE person_id = ?", user_name)
 
     for shares in stocks:
-        shares["stock_price"] = f"{float(shares["stock_price"]):.2f}"
+        shares["stock_price"] = f"{float(shares['stock_price']):.2f}"
 
         value = float(shares["stock_price"]) * int(shares["shares_bought"])
         total_value += value
