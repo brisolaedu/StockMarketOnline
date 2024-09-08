@@ -26,7 +26,6 @@ def portfolio(db, user_name):
     total_value = 0
 
     stocks = db.execute("SELECT stock_name, shares_bought, stock_price FROM accounts WHERE person_id = ?", user_name)
-    #return stocks
 
     for shares in stocks:
         shares["stock_price"] = f"{float(shares["stock_price"]):.2f}"
