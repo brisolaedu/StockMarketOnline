@@ -75,6 +75,17 @@ button:hover {
     text-align: center;
 }
 
+.header2 {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0047ab;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    font-size: xx-large;
+    border-radius: 2rem;
+    font-weight: bolder;
+}
+
 .section {
     padding-bottom: 1rem;
     padding-left: 2rem;
